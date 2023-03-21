@@ -33,5 +33,12 @@ public class p_5 {
         int c = sc.nextInt();
         max_no(a,b,c);
     }
-
 }
+
+
+OUTPUT:
+Enter Three numbers...
+42
+57
+25
+57 is maximum number...
