@@ -13,3 +13,10 @@ public class p_3 {
     }
 
 }
+
+
+OUTPUT:
+Enter value in meters =
+100
+Meters = 100.0
+Feet   = 328.084
