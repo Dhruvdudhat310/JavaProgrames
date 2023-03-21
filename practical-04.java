@@ -27,3 +27,9 @@ public class p_4 {
     }
 
 }
+
+
+OUTPUT:
+Enter a number...
+5
+5 is prime
