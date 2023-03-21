@@ -19,3 +19,15 @@ public class p_1 {
         System.out.println("Y =" + y);
     }
 }
+
+
+OUTPUT:
+Enter values of A B C D E F
+4
+5
+6
+7
+8
+9
+x = -0.6875
+y = 0.6666667    
