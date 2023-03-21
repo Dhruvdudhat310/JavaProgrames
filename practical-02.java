@@ -15,3 +15,11 @@ public class p_2 {
     }
 
 }
+
+
+OUTPUT:
+Enter your wait in pound =
+100
+Enetr your hight in inch =
+50
+BMI = 28.122783185566373
