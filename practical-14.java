@@ -1,28 +1,28 @@
-/*Write a program that reads an integer and displays all its smallest 
-factors in increasing order. For example if input number is 120, the 
-output should be as follows:2,2,2,3,5.*/
-
 import java.util.Scanner;
 
 public class p_14 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
-        int number = s.nextInt();
-        int factor = 2;
-        while (factor <= number) {
-            if (number % factor == 0) {
-                System.out.print(factor + " ");
-                number /= factor;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an Integer := ");
+        int a = sc.nextInt();
+        int b = a;
+        int div = 2;
+        System.out.print("1");
+        while (a > 1) {
+            if (a % div == 0) {
+                System.out.print(", " + div);
+                a = a / div;
             }
             else {
-                factor++;
+                div++;
             }
+        }
+        System.out.println(".");
     }
-}
 }
 
 
 OUTPUT:
-Enter an integer: 150
-2 3 5 5 
+Enter an Integer := 
+120
+1, 2, 2, 2, 3, 5.
