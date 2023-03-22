@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class prac_9 {
+public class p_9 {
     static void checkPalindrome(String s) {
         String r = "";
         for (int i = s.length() - 1; i >= 0; i--) {
