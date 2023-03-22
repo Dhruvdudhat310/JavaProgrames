@@ -10,7 +10,7 @@ public class p_11 {
 }
 
 
-OUTPUT:
+OUTPUT :
 28
 12
 36
