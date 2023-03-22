@@ -1,26 +1,22 @@
-/*Write a program to find length of string and print second half of 
-the string.*/
-
 import java.util.Scanner;
-
-public class p_7 {
+public class prac_7 {
     public static void main(String[] args) {
-        
-        Scanner a=new Scanner(System.in);
-        String s=new String();
-        System.out.println("Enter string:");
-        s=a.nextLine();
-        int sl=s.length();
-        System.out.println("lenght:"+sl);
-        int len=sl/2;
-        String m=s.substring(len,sl);
-        System.out.println("second half:"+m);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a String := ");
+        String str = sc.nextLine();
+        int length = str.length();
+        System.out.println();
+        System.out.println("The size of " + "the String is " + length);
+        System.out.println("Second-Half of the String is := ");
+        System.out.println(str.substring(length/2,length));
     }
 }
 
 
 OUTPUT:
-Enter string:
-java
-lenght:4
-second half:va
+Enter a String := 
+Dhruv
+
+The size of the String is 5
+Second-Half of the String is := 
+ruv
