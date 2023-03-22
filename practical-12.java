@@ -1,22 +1,22 @@
-/*Assume a vehicle plate number consists of three uppercase letters 
-followed by four digits. Write a program to generate a plate
-number.*/
+import java.util.Random;
 
 public class p_12 {
     public static void main(String[] args) {
-    int l1 = 65 + (int)(Math.random() * (90 - 65));
-		int l2 = 65 + (int)(Math.random() * (90 - 65));
-		int l3 = 65 + (int)(Math.random() * (90 - 65));	
-
-		int num1 = (int)(Math.random() * 10);
-		int num2 = (int)(Math.random() * 10);
-		int num3 = (int)(Math.random() * 10);
-		int num4 = (int)(Math.random() * 10);
-
-		System.out.println("Number Plate:"+(char)(l1)+((char)(l2))+((char)(l3))+num1+num2+num3+num4);
+        Random ra = new Random();
+        int num = ra.nextInt(9999);
+        int n = 'Z' - 'A' + 1;
+        char ch = 0;
+        String alpha = "";
+        for (int i = 0; i < 3; i++) {
+            ch = (char) ('A' + Math.random() * n);
+            alpha += ch;
+        }
+        System.out.println("Number plate is :");
+        System.out.println(alpha + num);
     }
 }
 
 
 OUTPUT:
-Number Plate:ORN2456
+Number plate is :
+VJF661
