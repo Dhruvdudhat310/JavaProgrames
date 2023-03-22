@@ -1,18 +1,24 @@
 import java.util.Scanner;
 
-public class P_8 {
+public class p_8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-      
         System.out.println("Enter a String := ");
         String s = sc.nextLine();
-        s = s.toLowerCase();
-        System.out.println(s);
+        char c;
+        int count = 0;
+        for(int i=0; i<s.length(); i++) {
+            c = s.charAt(i);
+            if (c >= 65 && c <= 90) {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
 
 
 OUTPUT:
 Enter a String := 
-DHRUV
-dhruv 
+Dhruv Dudhat
+2
