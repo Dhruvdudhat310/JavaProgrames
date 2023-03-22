@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class prac_7 {
+public class p_7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a String := ");
