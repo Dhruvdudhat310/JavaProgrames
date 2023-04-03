@@ -1,4 +1,4 @@
-//This Program is run on terminal.
+//This Program is run on terminal..
 
 import java.util.Arrays;
 import java.util.Scanner;
