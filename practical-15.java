@@ -32,6 +32,7 @@ public class p_15 {
 
 OUTPUT:
 Enter Two Integers := 
-2
+10
+15
 5
-1 
+
