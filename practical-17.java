@@ -1,70 +1,71 @@
-/*Write a program that generate 6*6 two-dimensional matrix, filled 
-with 0’s and 1’s , display the matrix, check every raw and column 
-have an odd number’s of 1’s*/
+import java.util.Random;
 
 public class p_17 {
-    public static int[][] create() {
-        int[][] m = new int[6][6];
-        for (int i = 0; i < 6; i++) {
-          for (int j = 0; j < 6; j++) {
-            m[i][j] = (int)((Math.random() * 5) % 2);
-          }
-        }
-        return m;
-    }
-    public static void display(int[][] m) {
-        System.out.print("Matrix Values \n");
-        for (int i = 0; i < 6; i++) {
-          for (int j = 0; j < 6; j++) {
-            System.out.print(m[i][j] + " ");
-          }
-          System.out.println();
+    public static void isRowsOdd(int[][] arr) {
+        for (int i = 0; i < 6 ; i++) {
+            int rowCount = 0;
+            for (int j = 0; j < 6; j++) {
+                if (arr[i][j] == 1) {
+                    rowCount++;
+                }
+            }
+            if (rowCount % 2 != 0) {
+                System.out.println("Row No. - " + (i + 1) + " have ODD no of 1s");
+            }
         }
     }
+
+    public static void isColumnOdd(int[][] arr) {
+        for (int i = 0; i < 6; i++) {
+            int columnCount = 0;
+            for (int j = 0; j < 6; j++) {
+                if (arr[j][i] == 1) {
+                    columnCount++;
+                }
+            }
+            if (columnCount % 2 != 0) {
+                System.out.println("Column No. - " + (i + 1) + " have ODD no of 1s");
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
-    int m[][];
-    int i, j, count;
-    m = create();
-    display(m);
-    System.out.println("Rows Having ODD no of 1s");
-    for (i = 0; i < 6; i++) {
-      count = 0;
-      for (j = 0; j < 6; j++) {
-        if (m[i][j] == 1) {
-          count++;
+        int row = 6;
+        int col = 6;
+        Random ra = new Random();
+        int[][] arr = new int[6][6];
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                arr[i][j] = ra.nextInt(2);
+            }
         }
-      }
-      if (count % 2 != 0) {
-        System.out.println("Row : " + (i + 1) + " have ODD no of 1s");
-      }
-    }
-    System.out.println("Columns Having ODD no of 1s");
-    for (i = 0; i < 6; i++) {
-      count = 0;
-      for (j = 0; j < 6; j++) {
-        if (m[j][i] == 1) {
-          count++;
+        System.out.println("The 2D array is: ");
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
         }
-      }
-      if (count % 2 != 0) {
-        System.out.println("Column : " + (i + 1) + " have ODD no of 1s");
-      }
+        System.out.println();
+        isRowsOdd(arr);
+        isColumnOdd(arr);
     }
-}
 }
 
 
 OUTPUT:
-Matrix Values 
-1 0 0 0 0 1 
-1 0 0 0 1 0 
-0 1 0 0 1 1 
-1 0 1 0 1 1 
-1 0 0 0 1 1 
-1 1 1 0 0 1 
-Rows Having ODD no of 1s
-Row : 3 have ODD no of 1s
-Row : 5 have ODD no of 1s
-Columns Having ODD no of 1s
-Column : 1 have ODD no of 1s
-Column : 6 have ODD no of 1s
+The 2D array is: 
+0 0 0 0 0 1 
+1 0 1 0 0 0 
+0 1 0 0 0 1 
+0 1 1 1 0 0 
+0 1 1 0 0 0 
+1 1 0 0 0 1 
+
+Row No. - 1 have ODD no of 1s
+Row No. - 4 have ODD no of 1s
+Row No. - 6 have ODD no of 1s
+Column No. - 3 have ODD no of 1s
+Column No. - 4 have ODD no of 1s
+Column No. - 6 have ODD no of 1s 
