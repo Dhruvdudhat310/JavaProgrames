@@ -1,95 +1,81 @@
-/*Write a program to do the addition of two matrices.*/
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class p_19 {
-        public static void main(String[] args) {
-        Scanner s=null;
-        int i,j=0,k,l=0,o,p;
-            s=new Scanner(System.in);
-            System.out.println("enter rows:");
-            int m=s.nextInt();
-            System.out.println("enter columns:");
-            int n=s.nextInt();
-            int a[][]=new int[m][n];
-            int b[][]=new int[m][n];
-            int c[][]=new int [m][n];
-            System.out.println("enter elements of matrix 1:");
-            for( i=0;i<m;i++)
-            {
-                for(j=0;j<n;j++)
-                {
-                    a[i][j]=s.nextInt();
-                }
+    static void displayData(int row, int col, int[][] arr1, int[][] arr2) {
+        System.out.println("The First array is: ");
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                System.out.print(arr1[i][j] + " ");
             }
-            System.out.println("enter elements of matrix 2:");
-            for( k=0;k<m;k++)
-            {
-                for( l=0;l<n;l++)
-                {
-                     b[k][l]=s.nextInt();
-                }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println("The Second array is: ");
+        for (int i=0; i<row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(arr2[i][j] + " ");
             }
-             System.out.println("matrix 1:");
-            for( i=0;i<m;i++)
-            {
-                for( j=0;j<n;j++)
-                {
-                    System.out.print(a[i][j] + " ");
-                }
-                System.out.println();
-            } 
-            System.out.println("matrix 2:");
-            for(k=0;k<m;k++)
-            {
-                for( l=0;l<n;l++)
-                {
-                    System.out.print(b[k][l] + " ");
-                }
-                System.out.println();
-            } 
-            System.out.println("addition:");
-            for(o=0;o<m;o++)
-            {
-                for( p=0;p<n;p++)
-                {
-                    c[o][p]=a[o][p]+b[o][p];
-                }
-                System.out.println();
-            }
-            for( o=0;o<m;o++)
-            {
-                for( p=0;p<n;p++)
-                {
-                    System.out.print(c[o][p] + " ");
-                }
-                System.out.println();
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    static void matrixSum(int row, int col, int[][] arr1, int[][] arr2){
+        int[][] sum = new int [row][col];
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                sum[i][j] = arr1[i][j] + arr2[i][j];
             }
         }
+        System.out.println("Sum of two Arrays := ");
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                System.out.print(sum[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Number of Rows :=");
+        int row = sc.nextInt();
+        System.out.println("Enter Number of Columns :=");
+        int col = sc.nextInt();
+        Random ra = new Random();
+        int[][] arr1 = new int[row][col];
+        int[][] arr2 = new int[row][col];
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                arr1[i][j] = ra.nextInt(10);
+            }
+        }
+        for (int i=0; i<row; i++) {
+            for (int j=0; j<col; j++) {
+                arr2[i][j] = ra.nextInt(10);
+            }
+        }
+
+        displayData(row, col, arr1, arr2);
+        matrixSum(row, col, arr1, arr2);
+    }
 }
 
 
 OUTPUT:
-enter rows:
+Enter Number of Rows :=
 2
-enter columns:
+Enter Number of Columns :=
 2
-enter elements of matrix 1:
-2
-3
-4
-5
-enter elements of matrix 2:
-6
-5
-4
-3
-matrix 1:
-2 3
-4 5
-matrix 2:
-6 5
-4 3
-addition:
-8 8
-8 8
+The First array is: 
+6 7 
+2 1 
+
+The Second array is: 
+8 0 
+5 4 
+
+Sum of two Arrays := 
+14 7 
+7 5 
